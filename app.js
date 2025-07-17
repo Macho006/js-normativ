@@ -37,13 +37,13 @@
 // let ball = prompt("Talabaning olgan balini kiriting");
 
 // if (ball >= 1 && ball <= 59) {
-//     console.log("Talabaning bahosi 2, imtihondan o'tmadi");
+//     console.log("Talabaning bahosi 2, imtihondan otmadi");
 // } else if (ball >= 60 && ball <= 69) {
-//     console.log("Talabaning bahosi 3, imtihondan o'tdi");
+//     console.log("Talabaning bahosi 3, imtihondan otdi");
 // } else if (ball >= 70 && ball <= 89) {
-//     console.log("Talabaning bahosi 4, imtihondan o'tdi");
+//     console.log("Talabaning bahosi 4, imtihondan otdi");
 // } else if (ball >= 90 && ball <= 100) {
-//     console.log("Talabaning bahosi 5, imtihondan o'tdi");
+//     console.log("Talabaning bahosi 5, imtihondan otdi");
 // } else {
 //     console.log("Noto'g'ri ball kiritildi!");
 // }
