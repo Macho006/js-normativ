@@ -73,49 +73,4 @@
 
 
 
-// 2-NORMATIV
 
-// 1-misol
-// for (let i = 1; i <= 20; i++) {
-//     if (i % 2 === 0) {
-//         console.log(i);
-//     }
-// }
-
-// let n = 10;
-// let sum = 0;
-
-// for (let i = 1; i <= n; i++) {
-//     sum += i;
-// }
-
-// console.log(sum);
-
-// let arr = [7, -8, 2, 6, 9, -4, 12, 3, -11, 18];
-// let sum = 0;
-
-// for (let num of arr) {
-//   if (num > 0 && num % 2 === 0) {
-//     sum += num;
-//   }
-// }
-
-// console.log(sum);
-
-// for (let i = 1; i <= 100; i++) {
-//     if (i % 3 === 0 && i % 5 === 0) {
-//         console.log(i);
-//     }
-// }
-
-// let arr = [2, -8, 2, 1, 5, 4, -15, 9, 13];
-
-// let max = arr[0];
-// let min = arr[0];
-
-// for (let num of arr) {
-//   if (num > max) max = num;
-//   if (num < min) min = num;
-// }
-
-// console.log("Kattasi:", max + ".", "Kichigi:", min);
