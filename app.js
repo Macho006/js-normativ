@@ -123,3 +123,40 @@
 // }
 
 // console.log("Kattasi:", max + ".", "Kichigi:", min);
+
+// 3-NORMATIV
+// 1-misol
+
+// let a = [3, 8, 9, 7, 5];
+// let b = a.pop();
+// let c = b ** 2;
+// a.unshift(c);
+
+// console.log(a);
+
+// 2-mislo
+// let a = [2, 8, 9, 1, 15, 3, 0, 5]
+// let juft = a.filter((n) => n % 2 === 0)
+// let res = juft.reduce((acc, cur) => acc + cur)
+
+// console.log(res);
+
+// 3-misol
+// let a = [2, -8, 9, 1, -15, 3, 0, 5]
+// let res = a.filter((n) => n > 0).reduce((acc, cur) => acc * cur);
+// console.log(res);
+
+// 4-misol
+
+// let a = [6,1,3,5,6,2,0,4]
+// let res = a.sort((a, b) => a -b).filter((n) => n > 2).map((num) => num ** 2)
+// console.log(res);
+
+
+// 5-misol
+// let a = [1, [2, 3], [4, [5, 6, 7]]]
+// let b = a.flat(2)
+// let res = b.filter((n) => n % 2 !== 0)
+// console.log(res);
+
+
