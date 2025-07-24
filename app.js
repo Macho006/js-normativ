@@ -159,4 +159,32 @@
 // let res = b.filter((n) => n % 2 !== 0)
 // console.log(res);
 
+// 4-NORMATIV
 
+// 1-misol
+// let a = ['jasmina', 'muhammaddiyor', 'bek', 'yusufxon', 'asad', 'john']
+// let res = a.filter((n) => n.length > 5)
+// console.log(res);
+
+// 2-misol
+// let a = [2, 3, 5, 7, 3, 8, 9];
+// let max = Math.max(...a);
+// let min = Math.min(...a);
+// let b = max - min;
+// console.log(b);
+
+// 3-misol
+// let a = ["seVInCH", "IBroHim", "miRKomil", "JORABEK", "abdulaziz"];
+// let res = a.map((n) => n[0].toUpperCase() + n.slice(1).toLowerCase())
+// console.log(res);
+
+// 4-misol
+// let a = [16, 20, 8, 2, 12, 27, 9, 13];
+// let b = a[a.length - 1];
+// let res = a.find((n) => n < b) || 0;
+// console.log(res);
+
+// 5-misol
+// let arr = [1, 2, 2, 3, 4, 4, 5];
+// let res = arr.filter((n, i, a) => a.indexOf(n) === a.lastIndexOf(n));
+// console.log(res);
