@@ -188,3 +188,46 @@
 // let arr = [1, 2, 2, 3, 4, 4, 5];
 // let res = arr.filter((n, i, a) => a.indexOf(n) === a.lastIndexOf(n));
 // console.log(res);
+
+// 5-NORMATIV
+
+// 1-misol
+// let obj = { 
+
+// };
+// obj.name = "Palonchi"
+// obj.age = 19
+// obj.country = "earth"
+// console.log(obj);
+
+// 2-misol
+// let obj = { 
+//     valyuta: "dollar", 
+//     miqdor: 100 
+// };
+// let kartoshka = 2 * 10; 
+// let cola = 5 * 6; 
+// obj.miqdor -= (kartoshka + cola);
+// console.log(obj);
+
+// 3-misol
+// let obj = { 
+//     Anvar: 19, 
+//     Salim: 21, 
+//     Jasur: 13 
+// };
+// let age = Math.max(...Object.values(obj));
+// console.log(age);
+
+
+// 4-misol
+// let obj = { name: "John", age: 22, city: "Tashkent" };
+// let arr = Object.entries(obj);
+// arr[1][1] = 30; 
+// arr[2][1] = "New York"; 
+// console.log(arr); 
+
+// 5-misol
+// ??????????
+
+
