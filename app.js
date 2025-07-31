@@ -230,4 +230,69 @@
 // 5-misol
 // ??????????
 
+// 6-NORMATIV
 
+// 1-misol 
+// let obj = {
+//     name: "John",
+//     age: 22,
+//     city: "Tashkent",
+//     printValues: function () {
+//         console.log(Object.values(this));
+//     }
+// };
+// obj.printValues(); 
+
+// 2-misol
+// let obj = {
+//     a: 15,
+//     b: 10,
+//     yuzasi: function () {
+//         return this.a * this.b;
+//     }
+// };
+// console.log(obj.yuzasi());
+
+// 3-misol
+// let obj = {
+//     soliq: 20,
+//     kamunal: 12,
+//     prava: 980,
+//     havo: 3,
+//     qanchaKotarildi: function (foiz) {
+//         Object.keys(this).forEach(key => {
+//             if (typeof this[key] === "number") {
+//                 this[key] *= 1 + foiz / 100;
+//             }
+//         });
+//     }
+// };
+// obj.qanchaKotarildi(15);
+// console.log(obj);
+
+// 4-misol
+// let obj = {
+//     Salim: 50,
+//     Vali: 87,
+//     Ali: 12,
+//     deleteUser: function (name) {
+//         delete this[name];
+//     }
+// };
+// obj.deleteUser("Vali");
+// console.log(obj);
+
+// 5-misol
+// let obj = { 
+//     olam: 7, 
+//     mandarin: 4, 
+//     banan: 6, 
+//     apelsin: 1 
+// };
+
+// for (let key in obj) {
+//     if (obj[key] % 2 !== 0) {
+//         delete obj[key];
+//     }
+// }
+// console.log(obj);
