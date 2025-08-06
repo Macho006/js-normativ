@@ -296,3 +296,77 @@
 //     }
 // }
 // console.log(obj);
+
+
+
+// Eski Normativ 
+
+// 2.1-misol
+// function a (str) {
+//     for (let i = 0; i < str.length; i++) {
+//         if (str.indexOf(str[i]) !== i) { 
+//             return str[i]; 
+//         }
+//     }
+//     return null; 
+// }
+// console.log(a("javascript")); 
+// console.log(a("frontend"));   
+// console.log(a("abcdef"));    
+
+// 2.2-misol
+
+// let arr = [{ age: 30 }, { age: 20 }, { age: 40 }];
+// arr.sort((a, b) => a.age - b.age);
+// console.log(arr);
+
+
+// let arr2 = [{ age: 25 }, { age: 22 }, { age: 28 }];
+// arr2.sort((a, b) => a.age - b.age);
+// console.log(arr2);
+
+// let arr3 = [{ age: 50 }, { age: 10 }, { age: 40 }];
+// arr3.sort((a, b) => a.age - b.age);
+// console.log(arr3);
+
+// 2.3-misol
+
+// let start = +prompt("sonni kiriting:");
+// let end = +prompt("Oxirgi sonni kiriting:");
+
+// for (let i = start; i <= end; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz");
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// 2.4-misol
+// function a(arr, value) {
+//     const index = arr.indexOf(value);
+//     if (index !== -1) {
+//         return index;
+//     } else {
+//         return -1;
+//     }
+// }
+
+// console.log(a([1, 5, 7, 9], 7)); 
+// console.log(a([10, 20, 30], 15)); 
+// console.log(a([4, 6, 8], 6)); 
+
+// 2.5-misol
+// function a(b) {
+//     const reversed = b.split('').reverse().join('');
+//     return b === reversed;
+// }
+
+
+// console.log(a("madam"));    
+// console.log(a("racecar")); 
+// console.log(a("hello"));   
