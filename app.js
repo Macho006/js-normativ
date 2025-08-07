@@ -370,3 +370,72 @@
 // console.log(a("madam"));    
 // console.log(a("racecar")); 
 // console.log(a("hello"));   
+
+
+
+// EXAM
+// 1-misol
+// function makeNegative(num) {
+//     if (num > 0) {
+//         console.log(-num);
+//         ;
+//     } else if (num < 0) {
+//         console.log(num);
+        
+//     } else {
+//         console.log(num);
+        
+//     };
+// }
+
+// makeNegative(5)
+// makeNegative(-3)
+// makeNegative(0)
+
+// 2-misol
+// function evenOrOdd(number){
+//     if (number % 2 === 0 ) {
+//         console.log("even");        
+//     } else {
+//         console.log("odd");
+        
+//     }
+// }
+
+// evenOrOdd(2)
+// evenOrOdd(7)
+
+// 3-misol
+// function remmoveChar(str) {
+//     let arr = str.split('')
+//     let res = arr.slice(1, -1).join('').toString()
+//     console.log(res);
+
+        
+// }
+// remmoveChar("hello")
+// remmoveChar("abc")
+
+// 4-misol
+// function solution(str) {
+//     let arr = str.split('')
+//     let res = arr.reverse(1, -1).join('').toString()
+//     console.log(res);
+    
+    
+// }
+// solution("world")
+
+// 5-misol
+// function positiveSum(arr) {
+//     const a = arr.filter(num => num > 0);
+//     const b = a.reduce((acc, cur) => acc + cur, 0);
+//     console.log(b);
+// }
+
+// positiveSum([1, -2, 3, 4, -5]);
+// 6-misol
+// function repeatStr(n, s) {
+//     return s.repeat(n);
+// }
+// console.log(repeatStr(3, "ha"));
