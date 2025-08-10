@@ -434,8 +434,56 @@
 // }
 
 // positiveSum([1, -2, 3, 4, -5]);
+
 // 6-misol
 // function repeatStr(n, s) {
 //     return s.repeat(n);
 // }
 // console.log(repeatStr(3, "ha"));
+
+
+// 7-NORMATIV
+// 1-misol
+// let obj = { Salim: 25, Ali: 17, Malika: 21 };
+// for (let key in obj) {
+//     obj[key] += 2;
+// }
+// console.log(obj); 
+
+// 2-misol
+// let users = [
+//     { name: "Ali", age: 20 },
+//     { name: "Vali", age: 25 },
+//     { name: "Sami", age: 22 }
+// ];
+// users.forEach(user => {
+//     console.log(`${user.name}: ${user.age}`);
+// });
+
+
+// 3-misol
+// let obj = { a: 10, b: "hello", c: 5, d: true };
+// for (let key in obj) {
+//     if (typeof obj[key] === "number") {
+//         console.log(`${key}=${obj[key]}`);
+//     }
+// }
+
+
+// 4-misol
+// let person = { name: "Lola", age: null, job: "Teacher", city: null };
+// for (let key in person) {
+//     if (person[key] === null) {
+//         delete person[key];
+//     }
+// }
+// console.log(person); 
+
+// 5-misol
+// const users = [
+//     { name: "Ali", age: 17 },
+//     { name: "Vali", age: 19 },
+//     { name: "Sami", age: 21 }
+// ];
+// const filterUsers = users.filter(user => user.age > 18);
+// console.log(filterUsers);
