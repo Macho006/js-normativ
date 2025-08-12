@@ -576,3 +576,58 @@
 //     }
 // }
 // registerUser(user);
+
+
+
+// 9-NORMATIV
+
+// 1-savol
+// function myForEach(array, callback) {
+//     for (let i = 0; i < array.length; i++) {
+//         callback(array[i], i, array);
+//     }
+// }
+
+// const nums = [10, 20, 30];
+
+// myForEach(nums, function(item, index, arr) {
+//     console.log(`Index: ${index}, Value: ${item}, Array: [${arr}]`);
+// });
+
+// 2-savol
+// function myFind(array, callback) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (callback(array[i], i, array)) {
+//             return array[i];
+//         }
+//     }
+//     return undefined;
+// }
+
+// const nums = [5, 12, 8, 13, 14];
+// const found = myFind(nums, x => x > 10);
+// console.log(found);
+
+// 3-savol
+// function mySome(array, callback) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (callback(array[i], i, array)) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// function myEvery(array, callback) {
+//     for (let i = 0; i < array.length; i++) {
+//         if (!callback(array[i], i, array)) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// const nums = [1, 2, 3, 4, 5];
+
+// console.log(mySome(nums, x => x > 4));  
+// console.log(myEvery(nums, x => x > 0));
