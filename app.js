@@ -487,3 +487,92 @@
 // ];
 // const filterUsers = users.filter(user => user.age > 18);
 // console.log(filterUsers);
+
+
+// 8-NORMATIV
+// 1-savol
+// try {
+//     let a = +prompt("Birinchi raqamni kiriting")
+//     let b = +prompt("Ikkinchi raqamni kiriting")
+//     let c = prompt("Amalni kiriting (+, -, *, /):")
+//     let natija
+//     if (c === "+") {
+//         a + b
+//     } else if (c === "-") {
+//         a - b
+//     } else if (c === "*") {
+//         a * b
+//     } else if (amal === "/") {
+//         if (b === 0) {
+//             throw "0 bolish mumkinmas";
+//         }
+//         natija = a / b;
+//     } else {
+//         throw "Amal notogri";
+//     }
+//     alert( natija);
+// }
+// catch (xato) {
+//     alert("Xato: " + xato);
+// }
+// 2-savol
+// let name = prompt("Ismingizni kiriting");
+// let email = prompt("Emailizni kiriting");
+// let age = +prompt("Yoshingizni kiriting");
+// try {
+//     if (name.length <= 3) {
+//         console.log("Ism kamida 3 ta harf bo'lishi shart")
+//     }if (!email.includes("@") || !email.includes(".")) {
+//         console.log("Emailda @ va . bo'lishi shart")
+//     } if (age <= 7) {
+//         console.log("Yosh 7 dan katta bo'lishi shart");
+//     } else {
+//         alert("Muvaffaqiyatli");
+//     }
+// } catch (error) {
+//     console.log(error.message);
+// }
+// 3-savol
+// function checkType(num) {
+
+//     if (Array.isArray(value)) {
+//         console.log("Bu array");
+//     } else if (typeof value === "string") {
+//         console.log("Bu string");
+//     } else if (typeof value === "number") {
+//         console.log("Bu number");
+//     } else if (typeof value === "boolean") {
+//         console.log("Bu boolean");
+//     } else if (typeof value === "object") {
+//         console.log("Bu object");
+//     } else {
+//         console.log("Nomalum tur");
+//     }
+// }
+
+// checkType(5)
+
+// 4-savol
+// const user = {
+//     name: "Ali",
+//     age: 25,
+//     email: "ali@example.com",
+//     isStudent: true
+// };
+// function registerUser(user) {
+//     try {
+//         if (typeof user.name !== 'string' || user.name.length < 3) {
+//             throw new Error("Ism string bo'lishi va kamida 3 ta harfdan iborat bo'lishi kerak.");
+//         } if (typeof user.age !== 'number' || user.age < 7) {
+//             throw new Error("Yosh number bo'lishi va 7 yoki undan katta bo'lishi kerak.");
+//         } if (typeof user.email !== 'string' || !user.email.includes('@') || !user.email.includes('.')) {
+//             throw new Error("Email string bo'lishi va '@' hamda '.' belgilarini o'z ichiga olishi kerak.");
+//         } if (typeof user.isStudent !== 'boolean') {
+//             throw new Error("isStudent faqat boolean tipida bo'lishi kerak.");
+//         }
+//         console.log(`Ro'yxatdan muvaffaqiyatli o'tdingiz! Xush kelibsiz, ${user.name}!`);
+//     } catch (error) {
+//         console.log("Xatolik: " + error.message);
+//     }
+// }
+// registerUser(user);
