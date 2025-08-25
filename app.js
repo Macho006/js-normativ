@@ -672,3 +672,91 @@
 //     }
 // }
 // fn()
+
+// 11-NORMATIV DOM
+// 1-vazifa
+// let colorBox = document.getElementById("colorBox");
+// colorBox.style.width = "100px";
+// colorBox.style.height = "100px";
+// colorBox.style.backgroundColor = "lightgray";
+// colorBox.style.marginTop = "10px";
+
+// document.getElementById("colorBtn").addEventListener("click", function () {
+//   colorBox.style.backgroundColor = "green";
+// });
+
+// 2-vazifa
+// let hoverText = document.getElementById("hoverText");
+// hoverText.style.cursor = "pointer";
+// hoverText.addEventListener("mouseover", function () {
+//   hoverText.style.color = "red";
+// });
+// hoverText.addEventListener("mouseout", function () {
+//   hoverText.style.color = "black";
+// });
+
+// 3-vazifa
+// let classBox = document.getElementById("classBox");
+// classBox.style.padding = "10px";
+// classBox.style.margin = "10px 0";
+
+// document.getElementById("toggleClassBtn").addEventListener("click", function () {
+//   if (classBox.style.border) {
+//     classBox.style.border = "";
+//   } else {
+//     classBox.style.border = "2px solid blue";
+//   }
+// });
+
+// 4-vazifa
+// let image = document.getElementById("image");
+// image.style.marginTop = "10px"; 
+// image.style.width = "200px";
+
+// document.getElementById("imgBtn").addEventListener("click", function () {
+//   if (image.style.display === "none") {
+//     image.style.display = "block";
+//   } else {
+//     image.style.display = "none";
+//   }
+// });
+
+// 5-vazifa
+// let textInput = document.getElementById("textInput");
+// textInput.style.padding = "5px";
+// textInput.style.fontSize = "16px";
+
+// textInput.addEventListener("input", function () {
+//   if (textInput.value.length < 5) {
+//     textInput.style.border = "2px solid red";
+//   } else {
+//     textInput.style.border = "2px solid green";
+//   }
+// });
+
+// 6-vazifa
+// let multiColorBox = document.getElementById("multiColorBox");
+// multiColorBox.style.width = "100px";
+// multiColorBox.style.height = "100px";
+// multiColorBox.style.backgroundColor = "lightgray";
+// multiColorBox.style.marginTop = "10px";
+
+// let buttons = document.querySelectorAll(".colorBtn");
+// buttons.forEach(function (btn) {
+//   btn.style.marginRight = "5px";
+//   btn.addEventListener("click", function () {
+//     let color = btn.getAttribute("data-color");
+//     multiColorBox.style.backgroundColor = color;
+//   });
+// });
+
+// 7-vazifa
+// document.getElementById("darkModeBtn").addEventListener("click", function () {
+//   if (document.body.style.backgroundColor === "black") {
+//     document.body.style.backgroundColor = "white";
+//     document.body.style.color = "black";
+//   } else {
+//     document.body.style.backgroundColor = "black";
+//     document.body.style.color = "white";
+//   }
+// });
