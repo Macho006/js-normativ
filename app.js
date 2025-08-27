@@ -491,7 +491,31 @@
 
 // 8-NORMATIV
 // 1-savol
-
+// try {
+//     let num1 = +prompt("Birinchi sonni kiriting:");
+//     let amal = prompt("Amalni kiriting (+, -, *, /):");
+//     let num2 = +prompt("Ikkinchi sonni kiriting:");
+//     let natija;
+  
+//     if (amal == "+") {
+//       natija = num1 + num2;
+//     } else if (amal == "-") {
+//       natija = num1 - num2;
+//     } else if (amal == "*") {
+//       natija = num1 * num2;
+//     } else if (amal == "/") {
+//       if (num2 == 0) throw "0 ga bolish mumkin emas!";
+//       natija = num1 / num2;
+//     } else {
+//       throw "Notogri amal kiritdingiz!";
+//     }
+  
+//     alert("Natija: " + natija);
+  
+//   } catch (xato) {
+//     alert("Xatolik: " + xato);
+//   }
+  
   
 // // 2-savol
 // function royxatdanOtish(ism, email, yosh) {
