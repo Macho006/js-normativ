@@ -489,91 +489,6 @@
 // console.log(filterUsers);
 
 
-// 8-NORMATIV
-// 1-savol
-// try {
-//     let num1 = +prompt("Birinchi sonni kiriting:");
-//     let amal = prompt("Amalni kiriting (+, -, *, /):");
-//     let num2 = +prompt("Ikkinchi sonni kiriting:");
-//     let natija;
-  
-//     if (amal == "+") {
-//       natija = num1 + num2;
-//     } else if (amal == "-") {
-//       natija = num1 - num2;
-//     } else if (amal == "*") {
-//       natija = num1 * num2;
-//     } else if (amal == "/") {
-//       if (num2 == 0) throw "0 ga bolish mumkin emas!";
-//       natija = num1 / num2;
-//     } else {
-//       throw "Notogri amal kiritdingiz!";
-//     }
-  
-//     alert("Natija: " + natija);
-  
-//   } catch (xato) {
-//     alert("Xatolik: " + xato);
-//   }
-  
-  
-// // 2-savol
-// function royxatdanOtish(ism, email, yosh) {
-//     try {
-//       if (ism.length < 3) throw "Ism kamida 3 ta harf bolishi kerak!";
-//       if (!email.includes("@") || !email.includes(".")) throw "Email notogri!";
-//       if (yosh <= 7) throw "Yosh 7 dan katta bolishi kerak!";
-  
-//       console.log("Royxatdan muvaffaqiyatli otdingiz");
-//     } catch (xato) {
-//       console.error("Xatolik: " + xato);
-//     }
-//   }
-//   royxatdanOtish("Ali", "ali@gmail.com", 15);
-  
-// 3-savol
-// function checkType(value) {
-//     if (Array.isArray(value)) {
-//       console.log("Bu array");
-//     } else if (value === null) {
-//       console.log("Bu null");
-//     } else {
-//       console.log("Bu " + typeof value);
-//     }
-//   }
-  
-//   checkType(5);        
-//   checkType([1, 2]);   
-//   checkType("Salom");  
-//   checkType(true);     
-//   checkType({});       
-  
-
-// 4-savol
-// const user = {
-//     name: "Ali",
-//     age: 25,
-//     email: "ali@example.com",
-//     isStudent: true
-// };
-// function registerUser(user) {
-//     try {
-//         if (typeof user.name !== 'string' || user.name.length < 3) {
-//             throw new Error("Ism string bo'lishi va kamida 3 ta harfdan iborat bo'lishi kerak.");
-//         } if (typeof user.age !== 'number' || user.age < 7) {
-//             throw new Error("Yosh number bo'lishi va 7 yoki undan katta bo'lishi kerak.");
-//         } if (typeof user.email !== 'string' || !user.email.includes('@') || !user.email.includes('.')) {
-//             throw new Error("Email string bo'lishi va '@' hamda '.' belgilarini o'z ichiga olishi kerak.");
-//         } if (typeof user.isStudent !== 'boolean') {
-//             throw new Error("isStudent faqat boolean tipida bo'lishi kerak.");
-//         }
-//         console.log(`Ro'yxatdan muvaffaqiyatli o'tdingiz! Xush kelibsiz, ${user.name}!`);
-//     } catch (error) {
-//         console.log("Xatolik: " + error.message);
-//     }
-// }
-// registerUser(user);
-
 
 
 // 9-NORMATIV
@@ -757,3 +672,90 @@
 //     document.body.style.color = "white";
 //   }
 // });
+
+
+
+// 8-NORMATIV
+// 1-savol
+// try {
+//     let num1 = +prompt("Birinchi sonni kiriting:");
+//     let amal = prompt("Amalni kiriting (+, -, *, /):");
+//     let num2 = +prompt("Ikkinchi sonni kiriting:");
+//     let natija;
+  
+//     if (amal == "+") {
+//       natija = num1 + num2;
+//     } else if (amal == "-") {
+//       natija = num1 - num2;
+//     } else if (amal == "*") {
+//       natija = num1 * num2;
+//     } else if (amal == "/") {
+//       if (num2 == 0) throw "0 ga bolish mumkin emas!";
+//       natija = num1 / num2;
+//     } else {
+//       throw "Notogri amal kiritdingiz!";
+//     }
+  
+//     alert("Natija: " + natija);
+  
+//   } catch (xato) {
+//     alert("Xatolik: " + xato);
+//   }
+  
+  
+// // 2-savol
+// function royxatdanOtish(ism, email, yosh) {
+//     try {
+//       if (ism.length < 3) throw "Ism kamida 3 ta harf bolishi kerak!";
+//       if (!email.includes("@") || !email.includes(".")) throw "Email notogri!";
+//       if (yosh <= 7) throw "Yosh 7 dan katta bolishi kerak!";
+  
+//       console.log("Royxatdan muvaffaqiyatli otdingiz");
+//     } catch (xato) {
+//       console.error("Xatolik: " + xato);
+//     }
+//   }
+//   royxatdanOtish("Ali", "ali@gmail.com", 15);
+  
+// 3-savol
+// function checkType(value) {
+//     if (Array.isArray(value)) {
+//       console.log("Bu array");
+//     } else if (value === null) {
+//       console.log("Bu null");
+//     } else {
+//       console.log("Bu " + typeof value);
+//     }
+//   }
+  
+//   checkType(5);        
+//   checkType([1, 2]);   
+//   checkType("Salom");  
+//   checkType(true);     
+//   checkType({});       
+  
+
+// 4-savol
+// const user = {
+//     name: "Ali",
+//     age: 25,
+//     email: "ali@example.com",
+//     isStudent: true
+// };
+// function registerUser(user) {
+//     try {
+//         if (typeof user.name !== 'string' || user.name.length < 3) {
+//             throw new Error("Ism string bo'lishi va kamida 3 ta harfdan iborat bo'lishi kerak.");
+//         } if (typeof user.age !== 'number' || user.age < 7) {
+//             throw new Error("Yosh number bo'lishi va 7 yoki undan katta bo'lishi kerak.");
+//         } if (typeof user.email !== 'string' || !user.email.includes('@') || !user.email.includes('.')) {
+//             throw new Error("Email string bo'lishi va '@' hamda '.' belgilarini o'z ichiga olishi kerak.");
+//         } if (typeof user.isStudent !== 'boolean') {
+//             throw new Error("isStudent faqat boolean tipida bo'lishi kerak.");
+//         }
+//         console.log(`Ro'yxatdan muvaffaqiyatli o'tdingiz! Xush kelibsiz, ${user.name}!`);
+//     } catch (error) {
+//         console.log("Xatolik: " + error.message);
+//     }
+// }
+// registerUser(user);
