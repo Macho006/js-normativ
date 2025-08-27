@@ -372,76 +372,6 @@
 // console.log(a("hello"));   
 
 
-
-// EXAM
-// 1-misol
-// function makeNegative(num) {
-//     if (num > 0) {
-//         console.log(-num);
-//         ;
-//     } else if (num < 0) {
-//         console.log(num);
-        
-//     } else {
-//         console.log(num);
-        
-//     };
-// }
-
-// makeNegative(5)
-// makeNegative(-3)
-// makeNegative(0)
-
-// 2-misol
-// function evenOrOdd(number){
-//     if (number % 2 === 0 ) {
-//         console.log("even");        
-//     } else {
-//         console.log("odd");
-        
-//     }
-// }
-
-// evenOrOdd(2)
-// evenOrOdd(7)
-
-// 3-misol
-// function remmoveChar(str) {
-//     let arr = str.split('')
-//     let res = arr.slice(1, -1).join('').toString()
-//     console.log(res);
-
-        
-// }
-// remmoveChar("hello")
-// remmoveChar("abc")
-
-// 4-misol
-// function solution(str) {
-//     let arr = str.split('')
-//     let res = arr.reverse(1, -1).join('').toString()
-//     console.log(res);
-    
-    
-// }
-// solution("world")
-
-// 5-misol
-// function positiveSum(arr) {
-//     const a = arr.filter(num => num > 0);
-//     const b = a.reduce((acc, cur) => acc + cur, 0);
-//     console.log(b);
-// }
-
-// positiveSum([1, -2, 3, 4, -5]);
-
-// 6-misol
-// function repeatStr(n, s) {
-//     return s.repeat(n);
-// }
-// console.log(repeatStr(3, "ha"));
-
-
 // 7-NORMATIV
 // 1-misol
 // let obj = { Salim: 25, Ali: 17, Malika: 21 };
@@ -487,7 +417,6 @@
 // ];
 // const filterUsers = users.filter(user => user.age > 18);
 // console.log(filterUsers);
-
 
 
 
@@ -759,3 +688,116 @@
 //     }
 // }
 // registerUser(user);
+
+
+
+// EXAM
+// 1-misol
+// function makeNegative(num) {
+//     if (num > 0) {
+//         console.log(-num);
+//         ;
+//     } else if (num < 0) {
+//         console.log(num);
+        
+//     } else {
+//         console.log(num);
+        
+//     };
+// }
+
+// makeNegative(5)
+// makeNegative(-3)
+// makeNegative(0)
+
+// 2-misol
+// function evenOrOdd(number){
+//     if (number % 2 === 0 ) {
+//         console.log("even");        
+//     } else {
+//         console.log("odd");
+        
+//     }
+// }
+
+// evenOrOdd(2)
+// evenOrOdd(7)
+
+// 3-misol
+// function remmoveChar(str) {
+//     let arr = str.split('')
+//     let res = arr.slice(1, -1).join('').toString()
+//     console.log(res);
+
+        
+// }
+// remmoveChar("hello")
+// remmoveChar("abc")
+
+// 4-misol
+// function solution(str) {
+//     let arr = str.split('')
+//     let res = arr.reverse(1, -1).join('').toString()
+//     console.log(res);
+    
+    
+// }
+// solution("world")
+
+// 5-misol
+// function positiveSum(arr) {
+//     const a = arr.filter(num => num > 0);
+//     const b = a.reduce((acc, cur) => acc + cur, 0);
+//     console.log(b);
+// }
+
+// positiveSum([1, -2, 3, 4, -5]);
+
+// 6-misol
+// function repeatStr(n, s) {
+//     return s.repeat(n);
+// }
+// console.log(repeatStr(3, "ha"));
+
+// 7-misol
+// function getMiddle(s) {
+//     let len = s.length;
+//     let middle = Math.floor(len / 2);
+  
+//     if (len % 2 === 0) {
+//       return s[middle - 1] + s[middle]; 
+//     } else {
+//       return s[middle]; 
+//     }
+//   }
+  
+//   console.log(getMiddle("test"));    
+//   console.log(getMiddle("testing")); 
+
+// 8-misol
+// function findShort(s) {
+//     return Math.min(...s.split(" ").map(word => word.length));
+//   }
+  
+//   console.log(findShort("I love JavaScript frontend")); 
+//   console.log(findShort("Simple and easy tasks")); 
+
+// 9-misol
+// function accum(s) {
+//     return s
+//       .split("")
+//       .map((char, i) => char.toUpperCase() + char.toLowerCase().repeat(i))
+//       .join("-");
+//   }
+//   console.log(accum("abcd"));    
+//   console.log(accum("RqaEzty")); 
+
+// 10-misol
+// function descendingOrder(n) {
+//     return parseInt(String(n).split("").sort((a, b) => b - a).join(""));
+//   }
+  
+//   console.log(descendingOrder(42145));   
+//   console.log(descendingOrder(145263));  
+  
+  
