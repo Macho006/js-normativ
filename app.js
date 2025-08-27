@@ -798,3 +798,74 @@
 //     }
 // }
 // registerUser(user);
+
+
+// DOM-2
+// Accordion
+// const acc = document.getElementById("accordion");
+// const triggers = acc.querySelectorAll(".trigger");
+// const panels = acc.querySelectorAll(".panel");
+
+
+// acc.style.maxWidth = "560px";
+// acc.style.margin = "24px auto";
+// acc.style.border = "1px solid #ddd";
+// acc.style.borderRadius = "8px";
+// acc.style.overflow = "hidden";
+// acc.style.fontFamily = "system-ui, sans-serif";
+
+
+// acc.querySelectorAll(".item").forEach((item, i) => {
+//   if (i > 0) item.style.borderTop = "1px solid #eee";
+// });
+
+
+// triggers.forEach(btn => {
+//     btn.style.display = "flex";
+//     btn.style.justifyContent = "space-between";
+//     btn.style.alignItems = "center";
+//     btn.style.width = "100%";
+//     btn.style.padding = "14px 16px";
+//     btn.style.background = "#fff";
+//     btn.style.border = "0";
+//     btn.style.cursor = "pointer";
+//     btn.style.fontSize = "16px";
+//   });
+  
+
+
+// acc.querySelectorAll(".chevron").forEach(icon => {
+//     icon.style.transition = "transform 0.2s ease";
+//   });
+  
+
+
+// panels.forEach(panel => {
+//     panel.style.padding = "0 16px 14px",
+//     panel.style.fontSize = "14px",
+//     panel.style.color = "#444",
+//     panel.style.display = "none"
+// });
+
+
+// function closeAll() {
+//   triggers.forEach(btn => {
+//     btn.setAttribute("aria-expanded", "false");
+//     btn.querySelector(".chevron").style.transform = "rotate(0deg)";
+//   });
+//   panels.forEach(p => p.style.display = "none");
+// }
+
+
+// triggers.forEach((btn, i) => {
+//   btn.addEventListener("click", () => {
+//     const expanded = btn.getAttribute("aria-expanded") === "true";
+//     closeAll();
+
+//     if (!expanded) {
+//       btn.setAttribute("aria-expanded", "true");
+//       panels[i].style.display = "block";
+//       btn.querySelector(".chevron").style.transform = "rotate(180deg)";
+//     }
+//   });
+// });
