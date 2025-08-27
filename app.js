@@ -690,6 +690,8 @@
 // registerUser(user);
 
 
+  
+// islomjonov muhammaddiyor
 
 // EXAM
 // 1-misol
@@ -799,5 +801,3 @@
   
 //   console.log(descendingOrder(42145));   
 //   console.log(descendingOrder(145263));  
-  
-// islomjonov muhammaddiyor
