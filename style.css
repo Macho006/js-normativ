@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  
+  }
+
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 300px;
+  }
+    
+  .btn {
+    padding: 12px 18px;
+    font-size: 1rem;
+    background: #00ffd5;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #00c9ab;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    display: flex;               
+    flex-direction: column;
+    top: 0;
+    transform: translateX(0);
+    gap: 10px;
+    z-index: 1000;
+  }
+  
+  .modal-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 23px -1px rgba(34, 60, 80, 0.15);
+    transform: translateY(-20px); 
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .modal-box.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .sonner-card p {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #3f3f3f;
+    margin: 0;
+  }
+  
+  .sonner-btn {
+    width: 46px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+   */

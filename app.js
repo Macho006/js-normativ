@@ -869,3 +869,30 @@
 //     }
 //   });
 // });
+
+// DOM Sonner
+// const openBtn = document.getElementById("openModal");
+// const overlay = document.getElementById("modalOverlay");
+
+// let cards = []; 
+// function addCards() {
+//   overlay.innerHTML = cards.map((card, index) => `
+//     <div class="modal-box show">
+//       <div class="sonner-card">
+//         <p>Event has been created</p>
+//         <p>Sunday, December 03, 2023 at 9:00 AM</p>
+//       </div>
+//       <button class="sonner-btn" onclick="removeCard(${index})">Close</button>
+//     </div>
+//   `).join("");
+// }
+
+// openBtn.addEventListener("click", () => {
+//     cards.push(addCards());
+// });
+
+// function removeCard(index) {
+//   cards.splice(index, 1);
+//   addCards();
+// }
+
