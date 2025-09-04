@@ -875,9 +875,11 @@
 // const overlay = document.getElementById("modalOverlay");
 
 // let cards = []; 
+// let idCounter = 0;
+
 // function addCards() {
 //   overlay.innerHTML = cards.map((card, index) => `
-//     <div class="modal-box show">
+//     <div class="modal-box show" id="card-${card.id}">
 //       <div class="sonner-card">
 //         <p>Event has been created</p>
 //         <p>Sunday, December 03, 2023 at 9:00 AM</p>
@@ -888,11 +890,20 @@
 // }
 
 // openBtn.addEventListener("click", () => {
-//     cards.push(addCards());
+//   const id = idCounter++;
+//   cards.push({ id });
+//   addCards();
+
+ 
+//   setTimeout(() => {
+//     let index = cards.findIndex(c => c.id === id);
+//     if (index > -1) {
+//       removeCard(index);
+//     }
+//   }, 3000); 
 // });
 
 // function removeCard(index) {
 //   cards.splice(index, 1);
 //   addCards();
 // }
-
