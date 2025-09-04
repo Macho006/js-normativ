@@ -907,3 +907,78 @@
 //   cards.splice(index, 1);
 //   addCards();
 // }
+
+// DOM Drag-End-Drop
+const products = [
+    { id: 11, name: "Non", price: 1 },
+    { id: 2, name: "Sut", price: 2 },
+    { id: 3, name: "Suv", price: 3 },
+  ];
+  
+  let cart = [];
+  
+  const productList = document.getElementById("product-list");
+  const cartList = document.getElementById("cart-list"); 
+  const totalEl = document.getElementById("total"); 
+  const cartBox = document.getElementById("cart"); 
+  
+  products.forEach((product) => {
+    const div = document.createElement('div');
+    div.className = 'product-item';
+    div.textContent = `${product.name} - $${product.price}`;
+    div.draggable = true;
+    div.dataset.id = product.id;
+  
+    div.addEventListener('dragstart', (e) => {
+      e.dataTransfer.setData('text/plain', product.id)
+    })
+  
+    productList.appendChild(div)
+  })
+  
+  cartBox.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    cartBox.classList.add("drag-over");
+  })
+  
+  cartBox.addEventListener('dragleave', () => {
+    cartBox.classList.remove('drag-over');
+  })
+  
+  cartBox.addEventListener('drop', (e) => {
+    e.preventDefault(); 
+    cartBox.classList.remove("drag-over");
+    const id = parseInt(e.dataTransfer.getData('text/plain'))
+    const product = products.find((p) => p.id === id);
+    if (product) {
+      addToCart(product);
+    }
+  })
+  
+  function addToCart(product) {
+    const existing = cart.find((item) => item.id === product.id);
+  
+    if (existing) {
+      existing.count++;
+    } else {
+      cart.push({ ...product, count: 1 });
+    }
+    alert(product.name)
+    updateCart();
+  }
+  
+  function updateCart() {
+    cartList.innerHTML = ""; 
+  
+    cart.forEach((p) => {
+      const li = document.createElement('li')
+      li.className = "cart-item"; 
+      li.textContent = `${p.name} x ${p.count} = $${(
+        p.price * p.count
+      ).toFixed(2)}`;
+  
+      cartList.appendChild(li);
+    })
+    const totalPrice = cart.reduce((acc, cur) => acc + cur.price * cur.count, 0);
+    totalEl.textContent = `${totalPrice.toFixed(2)}`;
+  }
