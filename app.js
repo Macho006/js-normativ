@@ -1017,7 +1017,7 @@ saveBtn.addEventListener('click', () => {
   const name = input.value.trim();
   if (name) {
     localStorage.setItem('name', name);
-    nameDisplay.textContent = `Ism: ${name}`; // faqat shu joy yangilanadi
+    nameDisplay.textContent = `Ism: ${name}`; 
     input.value = "";
   }
 });
