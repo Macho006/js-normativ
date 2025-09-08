@@ -909,76 +909,213 @@
 // }
 
 // DOM Drag-End-Drop
-const products = [
-    { id: 11, name: "Non", price: 1 },
-    { id: 2, name: "Sut", price: 2 },
-    { id: 3, name: "Suv", price: 3 },
-  ];
+// const products = [
+//     { id: 11, name: "Non", price: 1 },
+//     { id: 2, name: "Sut", price: 2 },
+//     { id: 3, name: "Suv", price: 3 },
+//   ];
   
-  let cart = [];
+//   let cart = [];
   
-  const productList = document.getElementById("product-list");
-  const cartList = document.getElementById("cart-list"); 
-  const totalEl = document.getElementById("total"); 
-  const cartBox = document.getElementById("cart"); 
+//   const productList = document.getElementById("product-list");
+//   const cartList = document.getElementById("cart-list"); 
+//   const totalEl = document.getElementById("total"); 
+//   const cartBox = document.getElementById("cart"); 
   
-  products.forEach((product) => {
-    const div = document.createElement('div');
-    div.className = 'product-item';
-    div.textContent = `${product.name} - $${product.price}`;
-    div.draggable = true;
-    div.dataset.id = product.id;
+//   products.forEach((product) => {
+//     const div = document.createElement('div');
+//     div.className = 'product-item';
+//     div.textContent = `${product.name} - $${product.price}`;
+//     div.draggable = true;
+//     div.dataset.id = product.id;
   
-    div.addEventListener('dragstart', (e) => {
-      e.dataTransfer.setData('text/plain', product.id)
-    })
+//     div.addEventListener('dragstart', (e) => {
+//       e.dataTransfer.setData('text/plain', product.id)
+//     })
   
-    productList.appendChild(div)
-  })
+//     productList.appendChild(div)
+//   })
   
-  cartBox.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    cartBox.classList.add("drag-over");
-  })
+//   cartBox.addEventListener('dragover', (e) => {
+//     e.preventDefault();
+//     cartBox.classList.add("drag-over");
+//   })
   
-  cartBox.addEventListener('dragleave', () => {
-    cartBox.classList.remove('drag-over');
-  })
+//   cartBox.addEventListener('dragleave', () => {
+//     cartBox.classList.remove('drag-over');
+//   })
   
-  cartBox.addEventListener('drop', (e) => {
-    e.preventDefault(); 
-    cartBox.classList.remove("drag-over");
-    const id = parseInt(e.dataTransfer.getData('text/plain'))
-    const product = products.find((p) => p.id === id);
-    if (product) {
-      addToCart(product);
-    }
-  })
+//   cartBox.addEventListener('drop', (e) => {
+//     e.preventDefault(); 
+//     cartBox.classList.remove("drag-over");
+//     const id = parseInt(e.dataTransfer.getData('text/plain'))
+//     const product = products.find((p) => p.id === id);
+//     if (product) {
+//       addToCart(product);
+//     }
+//   })
   
-  function addToCart(product) {
-    const existing = cart.find((item) => item.id === product.id);
+//   function addToCart(product) {
+//     const existing = cart.find((item) => item.id === product.id);
   
-    if (existing) {
-      existing.count++;
-    } else {
-      cart.push({ ...product, count: 1 });
-    }
-    alert(product.name)
-    updateCart();
+//     if (existing) {
+//       existing.count++;
+//     } else {
+//       cart.push({ ...product, count: 1 });
+//     }
+//     alert(product.name)
+//     updateCart();
+//   }
+  
+//   function updateCart() {
+//     cartList.innerHTML = ""; 
+  
+//     cart.forEach((p) => {
+//       const li = document.createElement('li')
+//       li.className = "cart-item"; 
+//       li.textContent = `${p.name} x ${p.count} = $${(
+//         p.price * p.count
+//       ).toFixed(2)}`;
+  
+//       cartList.appendChild(li);
+//     })
+//     const totalPrice = cart.reduce((acc, cur) => acc + cur.price * cur.count, 0);
+//     totalEl.textContent = `${totalPrice.toFixed(2)}`;
+//   }
+
+// Normative Local Storage and Event listeners
+
+// klik hissoblagich
+const clickBtn = document.getElementById('click');
+
+let count = parseInt(localStorage.getItem('counter')) || 0;
+
+const son = document.getElementById('son');
+son.textContent = `son: ${count}`;
+
+clickBtn.addEventListener('click', () => {
+  count++;
+  localStorage.setItem('counter', count); 
+  son.textContent = `son: ${count}`; 
+});
+
+
+
+
+// Input qiymatini saqlash
+
+const input = document.getElementById('input');
+const saveBtn = document.getElementById('saveBtn');
+const nameDisplay = document.getElementById('nameDisplay');
+
+const savedName = localStorage.getItem('name');
+if (savedName) {
+  nameDisplay.textContent = `Ism: ${savedName}`;
+}
+
+saveBtn.addEventListener('click', () => {
+  const name = input.value.trim();
+  if (name) {
+    localStorage.setItem('name', name);
+    nameDisplay.textContent = `Ism: ${name}`; // faqat shu joy yangilanadi
+    input.value = "";
   }
-  
-  function updateCart() {
-    cartList.innerHTML = ""; 
-  
-    cart.forEach((p) => {
-      const li = document.createElement('li')
-      li.className = "cart-item"; 
-      li.textContent = `${p.name} x ${p.count} = $${(
-        p.price * p.count
-      ).toFixed(2)}`;
-  
-      cartList.appendChild(li);
-    })
-    const totalPrice = cart.reduce((acc, cur) => acc + cur.price * cur.count, 0);
-    totalEl.textContent = `${totalPrice.toFixed(2)}`;
+});
+
+
+// Form tekshruv
+
+const form = document.getElementById('form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const modal = document.getElementById('modal');
+const modalMessage = document.getElementById('modal-message');
+const closeModal = document.getElementById('closeModal');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+
+  if (!name || !email) {
+    modalMessage.textContent = "Iltimos, barcha maydonlarni toldiring!";
+    modalMessage.style.color = "red";
+  } else if (!email.includes('@')) {
+    modalMessage.textContent = "Email notogri!";
+    modalMessage.style.color = "orange";
+  } else {
+    modalMessage.textContent = "Muvaffaqiyatli yuborildi!";
+    modalMessage.style.color = "green";
   }
+
+
+  modal.style.display = "flex";
+
+
+  nameInput.value = "";
+  emailInput.value = "";
+});
+
+
+closeModal.addEventListener('click', () => {
+  modal.style.display = "none";
+});
+
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Sichqoncha koordinatalari
+const box = document.getElementById("box-mouse");
+const coords = document.getElementById("coords");
+
+box.addEventListener("mousemove", function(e) {
+  const rect = box.getBoundingClientRect(); 
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;  
+
+  coords.textContent = `X: ${x}, Y: ${y}`;
+});
+
+box.addEventListener("mouseleave", function() {
+  coords.textContent = "Tashqaridaman";
+});
+
+
+// Til o'zgartirish menusi
+
+const uzBtn = document.getElementById("uzBtn");
+const enBtn = document.getElementById("enBtn");
+const langMessage = document.getElementById("langMessage");
+const activeBg = document.querySelector(".active-bg");
+
+const texts = {
+  uz: "Salom, xush kelibsiz!",
+  en: "Hello, welcome!"
+};
+
+let currentLang = localStorage.getItem("lang") || "uz";
+
+function updateLanguage(lang) {
+  langMessage.textContent = texts[lang];
+  localStorage.setItem("lang", lang);
+
+  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+
+  if (lang === "uz") {
+    uzBtn.classList.add("active");
+    activeBg.style.transform = "translateX(0)";
+  } else {
+    enBtn.classList.add("active");
+    activeBg.style.transform = "translateX(100%)";
+  }
+}
+
+uzBtn.addEventListener("click", () => updateLanguage("uz"));
+enBtn.addEventListener("click", () => updateLanguage("en"));
+
+updateLanguage(currentLang);
