@@ -1119,3 +1119,49 @@ uzBtn.addEventListener("click", () => updateLanguage("uz"));
 enBtn.addEventListener("click", () => updateLanguage("en"));
 
 updateLanguage(currentLang);
+
+
+// EXAM hrml css va js dom
+// tugma bosilganda text ozgarishi
+const text = document.getElementById('text')
+const btn = document.getElementById('btn-text')
+
+btn.addEventListener('click', () => {
+  text.textContent = "Salom"
+});
+
+// yangi li element qoshish
+const list = document.getElementById('myList')
+const addBtn = document.getElementById('addBtn')
+
+
+addBtn.addEventListener('click', () => {
+  const texts = prompt('yangi matin qoshing')
+
+  if(texts) {
+    const li = document.createElement('li')
+    li.textContent = texts
+    list.appendChild(li)
+  }
+})
+
+// matin uzunligini korish
+const textarea = document.getElementById('textarea')
+const hissob = document.getElementById('hissob')
+
+textarea.addEventListener('input', () => {
+  hissob.textContent = textarea.value.length + ' ta';
+});
+
+// tugmani sanash
+
+const buttons = document.querySelectorAll('#buttons button')
+const btnCount = document.getElementById('btncount');
+let total = 0;
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    total++;
+    btnCount.textContent = total + " ta";
+  });
+});

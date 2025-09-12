@@ -123,6 +123,8 @@ body {
   gap: 50px;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .click-box {
   width: 500px;
@@ -594,4 +596,39 @@ body {
   font-size: 18px;
   font-weight: bold;
   color: #333;
+}
+
+
+/* EXAM html css vs js dom */
+/* tugma bosilganda text ozgarishi */
+#btn-text{
+  padding: 10px;
+}
+/* yangi li element qoshish */
+.royxat {
+  padding: 12px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.royxat ul {
+  list-style: none;
+}
+#addBtn {
+  padding: 5px;
+}
+
+/* matin uzunligini korish */
+
+#textarea {
+  padding: 4px;
+}
+
+/* tugmani sansh */
+
+.buttons button{
+  width: 40px;
+  height: 40px;
+
 }
