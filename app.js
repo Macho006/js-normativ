@@ -1167,3 +1167,60 @@
 // });
 
 
+
+// API + DOM
+
+async function product() {
+  try {
+    const res = await fetch("https://api.escuelajs.co/api/v1/products");
+    const products = await res.json();
+    const grid = document.getElementById("grid");
+
+    products.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "border w-[200px] rounded-lg overflow-hidden shadow-sm flex flex-col";
+
+      const imgBox = document.createElement("div");
+      imgBox.className = "h-40 flex items-center justify-center bg-gray-100";
+
+      const img = document.createElement("img");
+      img.src = (p.images) || "";
+      img.alt = p.title;
+      img.className = "max-h-full max-w-full object-contain";
+      img.loading = "lazy";
+      imgBox.appendChild(img);
+
+      const content = document.createElement("div");
+      content.className = "p-2 flex flex-col flex-1";
+
+      const title = document.createElement("h2")
+      title.className = "text-sm font-medium truncate"
+      title.textContent = p.title
+
+      const category = document.createElement("p");
+      category.className = "text-sm text-gray-500 mt-1 truncate";
+      category.textContent = p.category?.name || "";
+
+      const description = document.createElement("p")
+      description.className = "mt-1 truncate"
+      description.textContent = p.description
+
+      const price = document.createElement("b")
+      price.textContent = p.price + "$"
+
+      content.appendChild(title)
+      content.appendChild(description)
+      content.appendChild(category)
+      content.appendChild(price)
+      card.appendChild(imgBox);
+      card.appendChild(content);
+      grid.appendChild(card);
+    });
+
+  } catch (err) {
+    alert("Error:" + err.message)
+  }
+  
+}
+
+product()
