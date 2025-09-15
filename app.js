@@ -986,182 +986,184 @@
 // Normative Local Storage and Event listeners
 
 // klik hissoblagich
-const clickBtn = document.getElementById('click');
+// const clickBtn = document.getElementById('click');
 
-let count = parseInt(localStorage.getItem('counter')) || 0;
+// let count = parseInt(localStorage.getItem('counter')) || 0;
 
-const son = document.getElementById('son');
-son.textContent = `son: ${count}`;
+// const son = document.getElementById('son');
+// son.textContent = `son: ${count}`;
 
-clickBtn.addEventListener('click', () => {
-  count++;
-  localStorage.setItem('counter', count); 
-  son.textContent = `son: ${count}`; 
-});
-
-
+// clickBtn.addEventListener('click', () => {
+//   count++;
+//   localStorage.setItem('counter', count); 
+//   son.textContent = `son: ${count}`; 
+// });
 
 
-// Input qiymatini saqlash
-
-const input = document.getElementById('input');
-const saveBtn = document.getElementById('saveBtn');
-const nameDisplay = document.getElementById('nameDisplay');
-
-const savedName = localStorage.getItem('name');
-if (savedName) {
-  nameDisplay.textContent = `Ism: ${savedName}`;
-}
-
-saveBtn.addEventListener('click', () => {
-  const name = input.value.trim();
-  if (name) {
-    localStorage.setItem('name', name);
-    nameDisplay.textContent = `Ism: ${name}`; 
-    input.value = "";
-  }
-});
 
 
-// Form tekshruv
+// // Input qiymatini saqlash
 
-const form = document.getElementById('form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const modal = document.getElementById('modal');
-const modalMessage = document.getElementById('modal-message');
-const closeModal = document.getElementById('closeModal');
+// const input = document.getElementById('input');
+// const saveBtn = document.getElementById('saveBtn');
+// const nameDisplay = document.getElementById('nameDisplay');
 
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+// const savedName = localStorage.getItem('name');
+// if (savedName) {
+//   nameDisplay.textContent = `Ism: ${savedName}`;
+// }
 
-  const name = nameInput.value.trim();
-  const email = emailInput.value.trim();
-
-  if (!name || !email) {
-    modalMessage.textContent = "Iltimos, barcha maydonlarni toldiring!";
-    modalMessage.style.color = "red";
-  } else if (!email.includes('@')) {
-    modalMessage.textContent = "Email notogri!";
-    modalMessage.style.color = "orange";
-  } else {
-    modalMessage.textContent = "Muvaffaqiyatli yuborildi!";
-    modalMessage.style.color = "green";
-  }
+// saveBtn.addEventListener('click', () => {
+//   const name = input.value.trim();
+//   if (name) {
+//     localStorage.setItem('name', name);
+//     nameDisplay.textContent = `Ism: ${name}`; 
+//     input.value = "";
+//   }
+// });
 
 
-  modal.style.display = "flex";
+// // Form tekshruv
+
+// const form = document.getElementById('form');
+// const nameInput = document.getElementById('name');
+// const emailInput = document.getElementById('email');
+// const modal = document.getElementById('modal');
+// const modalMessage = document.getElementById('modal-message');
+// const closeModal = document.getElementById('closeModal');
+
+// form.addEventListener('submit', function(e) {
+//   e.preventDefault();
+
+//   const name = nameInput.value.trim();
+//   const email = emailInput.value.trim();
+
+//   if (!name || !email) {
+//     modalMessage.textContent = "Iltimos, barcha maydonlarni toldiring!";
+//     modalMessage.style.color = "red";
+//   } else if (!email.includes('@')) {
+//     modalMessage.textContent = "Email notogri!";
+//     modalMessage.style.color = "orange";
+//   } else {
+//     modalMessage.textContent = "Muvaffaqiyatli yuborildi!";
+//     modalMessage.style.color = "green";
+//   }
 
 
-  nameInput.value = "";
-  emailInput.value = "";
-});
+//   modal.style.display = "flex";
 
 
-closeModal.addEventListener('click', () => {
-  modal.style.display = "none";
-});
+//   nameInput.value = "";
+//   emailInput.value = "";
+// });
 
 
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
-// Sichqoncha koordinatalari
-const box = document.getElementById("box-mouse");
-const coords = document.getElementById("coords");
-
-box.addEventListener("mousemove", function(e) {
-  const rect = box.getBoundingClientRect(); 
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;  
-
-  coords.textContent = `X: ${x}, Y: ${y}`;
-});
-
-box.addEventListener("mouseleave", function() {
-  coords.textContent = "Tashqaridaman";
-});
+// closeModal.addEventListener('click', () => {
+//   modal.style.display = "none";
+// });
 
 
-// Til o'zgartirish menusi
+// window.addEventListener('click', (e) => {
+//   if (e.target === modal) {
+//     modal.style.display = "none";
+//   }
+// });
 
-const uzBtn = document.getElementById("uzBtn");
-const enBtn = document.getElementById("enBtn");
-const langMessage = document.getElementById("langMessage");
-const activeBg = document.querySelector(".active-bg");
+// // Sichqoncha koordinatalari
+// const box = document.getElementById("box-mouse");
+// const coords = document.getElementById("coords");
 
-const texts = {
-  uz: "Salom, xush kelibsiz!",
-  en: "Hello, welcome!"
-};
+// box.addEventListener("mousemove", function(e) {
+//   const rect = box.getBoundingClientRect(); 
+//   const x = e.clientX - rect.left;
+//   const y = e.clientY - rect.top;  
 
-let currentLang = localStorage.getItem("lang") || "uz";
+//   coords.textContent = `X: ${x}, Y: ${y}`;
+// });
 
-function updateLanguage(lang) {
-  langMessage.textContent = texts[lang];
-  localStorage.setItem("lang", lang);
-
-  document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
-
-  if (lang === "uz") {
-    uzBtn.classList.add("active");
-    activeBg.style.transform = "translateX(0)";
-  } else {
-    enBtn.classList.add("active");
-    activeBg.style.transform = "translateX(100%)";
-  }
-}
-
-uzBtn.addEventListener("click", () => updateLanguage("uz"));
-enBtn.addEventListener("click", () => updateLanguage("en"));
-
-updateLanguage(currentLang);
+// box.addEventListener("mouseleave", function() {
+//   coords.textContent = "Tashqaridaman";
+// });
 
 
-// EXAM hrml css va js dom
-// tugma bosilganda text ozgarishi
-const text = document.getElementById('text')
-const btn = document.getElementById('btn-text')
+// // Til o'zgartirish menusi
 
-btn.addEventListener('click', () => {
-  text.textContent = "Salom"
-});
+// const uzBtn = document.getElementById("uzBtn");
+// const enBtn = document.getElementById("enBtn");
+// const langMessage = document.getElementById("langMessage");
+// const activeBg = document.querySelector(".active-bg");
 
-// yangi li element qoshish
-const list = document.getElementById('myList')
-const addBtn = document.getElementById('addBtn')
+// const texts = {
+//   uz: "Salom, xush kelibsiz!",
+//   en: "Hello, welcome!"
+// };
+
+// let currentLang = localStorage.getItem("lang") || "uz";
+
+// function updateLanguage(lang) {
+//   langMessage.textContent = texts[lang];
+//   localStorage.setItem("lang", lang);
+
+//   document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("active"));
+
+//   if (lang === "uz") {
+//     uzBtn.classList.add("active");
+//     activeBg.style.transform = "translateX(0)";
+//   } else {
+//     enBtn.classList.add("active");
+//     activeBg.style.transform = "translateX(100%)";
+//   }
+// }
+
+// uzBtn.addEventListener("click", () => updateLanguage("uz"));
+// enBtn.addEventListener("click", () => updateLanguage("en"));
+
+// updateLanguage(currentLang);
 
 
-addBtn.addEventListener('click', () => {
-  const texts = prompt('yangi matin qoshing')
+// // EXAM hrml css va js dom
+// // tugma bosilganda text ozgarishi
+// const text = document.getElementById('text')
+// const btn = document.getElementById('btn-text')
 
-  if(texts) {
-    const li = document.createElement('li')
-    li.textContent = texts
-    list.appendChild(li)
-  }
-})
+// btn.addEventListener('click', () => {
+//   text.textContent = "Salom"
+// });
 
-// matin uzunligini korish
-const textarea = document.getElementById('textarea')
-const hissob = document.getElementById('hissob')
+// // yangi li element qoshish
+// const list = document.getElementById('myList')
+// const addBtn = document.getElementById('addBtn')
 
-textarea.addEventListener('input', () => {
-  hissob.textContent = textarea.value.length + ' ta';
-});
 
-// tugmani sanash
+// addBtn.addEventListener('click', () => {
+//   const texts = prompt('yangi matin qoshing')
 
-const buttons = document.querySelectorAll('#buttons button')
-const btnCount = document.getElementById('btncount');
-let total = 0;
+//   if(texts) {
+//     const li = document.createElement('li')
+//     li.textContent = texts
+//     list.appendChild(li)
+//   }
+// })
 
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    total++;
-    btnCount.textContent = total + " ta";
-  });
-});
+// // matin uzunligini korish
+// const textarea = document.getElementById('textarea')
+// const hissob = document.getElementById('hissob')
+
+// textarea.addEventListener('input', () => {
+//   hissob.textContent = textarea.value.length + ' ta';
+// });
+
+// // tugmani sanash
+
+// const buttons = document.querySelectorAll('#buttons button')
+// const btnCount = document.getElementById('btncount');
+// let total = 0;
+
+// buttons.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     total++;
+//     btnCount.textContent = total + " ta";
+//   });
+// });
+
+
