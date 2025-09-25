@@ -986,6 +986,7 @@
 // Normative Local Storage and Event listeners
 
 // klik hissoblagich
+
 // const clickBtn = document.getElementById('click');
 
 // let count = parseInt(localStorage.getItem('counter')) || 0;
@@ -1002,7 +1003,7 @@
 
 
 
-// // Input qiymatini saqlash
+// Input qiymatini saqlash
 
 // const input = document.getElementById('input');
 // const saveBtn = document.getElementById('saveBtn');
@@ -1023,7 +1024,7 @@
 // });
 
 
-// // Form tekshruv
+// Form tekshruv
 
 // const form = document.getElementById('form');
 // const nameInput = document.getElementById('name');
@@ -1069,7 +1070,7 @@
 //   }
 // });
 
-// // Sichqoncha koordinatalari
+// Sichqoncha koordinatalari
 // const box = document.getElementById("box-mouse");
 // const coords = document.getElementById("coords");
 
@@ -1086,7 +1087,7 @@
 // });
 
 
-// // Til o'zgartirish menusi
+// Til o'zgartirish menusi
 
 // const uzBtn = document.getElementById("uzBtn");
 // const enBtn = document.getElementById("enBtn");
@@ -1121,106 +1122,106 @@
 // updateLanguage(currentLang);
 
 
-// // EXAM hrml css va js dom
-// // tugma bosilganda text ozgarishi
-// const text = document.getElementById('text')
-// const btn = document.getElementById('btn-text')
+// EXAM hrml css va js dom
+// tugma bosilganda text ozgarishi
+const text = document.getElementById('text')
+const btn = document.getElementById('btn-text')
 
-// btn.addEventListener('click', () => {
-//   text.textContent = "Salom"
-// });
+btn.addEventListener('click', () => {
+  text.textContent = "Salom"
+});
 
-// // yangi li element qoshish
-// const list = document.getElementById('myList')
-// const addBtn = document.getElementById('addBtn')
+// yangi li element qoshish
+const list = document.getElementById('myList')
+const addBtn = document.getElementById('addBtn')
 
 
-// addBtn.addEventListener('click', () => {
-//   const texts = prompt('yangi matin qoshing')
+addBtn.addEventListener('click', () => {
+  const texts = prompt('yangi matin qoshing')
 
-//   if(texts) {
-//     const li = document.createElement('li')
-//     li.textContent = texts
-//     list.appendChild(li)
-//   }
-// })
+  if(texts) {
+    const li = document.createElement('li')
+    li.textContent = texts
+    list.appendChild(li)
+  }
+})
 
-// // matin uzunligini korish
-// const textarea = document.getElementById('textarea')
-// const hissob = document.getElementById('hissob')
+// matin uzunligini korish
+const textarea = document.getElementById('textarea')
+const hissob = document.getElementById('hissob')
 
-// textarea.addEventListener('input', () => {
-//   hissob.textContent = textarea.value.length + ' ta';
-// });
+textarea.addEventListener('input', () => {
+  hissob.textContent = textarea.value.length + ' ta';
+});
 
-// // tugmani sanash
+// tugmani sanash
 
-// const buttons = document.querySelectorAll('#buttons button')
-// const btnCount = document.getElementById('btncount');
-// let total = 0;
+const buttons = document.querySelectorAll('#buttons button')
+const btnCount = document.getElementById('btncount');
+let total = 0;
 
-// buttons.forEach(btn => {
-//   btn.addEventListener('click', () => {
-//     total++;
-//     btnCount.textContent = total + " ta";
-//   });
-// });
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    total++;
+    btnCount.textContent = total + " ta";
+  });
+});
 
 
 
 // API + DOM
 
-async function product() {
-  try {
-    const res = await fetch("https://api.escuelajs.co/api/v1/products");
-    const products = await res.json();
-    const grid = document.getElementById("grid");
+// async function product() {
+//   try {
+//     const res = await fetch("https://api.escuelajs.co/api/v1/products");
+//     const products = await res.json();
+//     const grid = document.getElementById("grid");
 
-    products.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "border w-[200px] rounded-lg overflow-hidden shadow-sm flex flex-col";
+//     products.forEach(p => {
+//       const card = document.createElement("div");
+//       card.className = "border w-[200px] rounded-lg overflow-hidden shadow-sm flex flex-col";
 
-      const imgBox = document.createElement("div");
-      imgBox.className = "h-40 flex items-center justify-center bg-gray-100";
+//       const imgBox = document.createElement("div");
+//       imgBox.className = "h-40 flex items-center justify-center bg-gray-100";
 
-      const img = document.createElement("img");
-      img.src = (p.images) || "";
-      img.alt = p.title;
-      img.className = "max-h-full max-w-full object-contain";
-      img.loading = "lazy";
-      imgBox.appendChild(img);
+//       const img = document.createElement("img");
+//       img.src = (p.images) || "";
+//       img.alt = p.title;
+//       img.className = "max-h-full max-w-full object-contain";
+//       img.loading = "lazy";
+//       imgBox.appendChild(img);
 
-      const content = document.createElement("div");
-      content.className = "p-2 flex flex-col flex-1";
+//       const content = document.createElement("div");
+//       content.className = "p-2 flex flex-col flex-1";
 
-      const title = document.createElement("h2")
-      title.className = "text-sm font-medium truncate"
-      title.textContent = p.title
+//       const title = document.createElement("h2")
+//       title.className = "text-sm font-medium truncate"
+//       title.textContent = p.title
 
-      const category = document.createElement("p");
-      category.className = "text-sm text-gray-500 mt-1 truncate";
-      category.textContent = p.category?.name || "";
+//       const category = document.createElement("p");
+//       category.className = "text-sm text-gray-500 mt-1 truncate";
+//       category.textContent = p.category?.name || "";
 
-      const description = document.createElement("p")
-      description.className = "mt-1 truncate"
-      description.textContent = p.description
+//       const description = document.createElement("p")
+//       description.className = "mt-1 truncate"
+//       description.textContent = p.description
 
-      const price = document.createElement("b")
-      price.textContent = p.price + "$"
+//       const price = document.createElement("b")
+//       price.textContent = p.price + "$"
 
-      content.appendChild(title)
-      content.appendChild(description)
-      content.appendChild(category)
-      content.appendChild(price)
-      card.appendChild(imgBox);
-      card.appendChild(content);
-      grid.appendChild(card);
-    });
+//       content.appendChild(title)
+//       content.appendChild(description)
+//       content.appendChild(category)
+//       content.appendChild(price)
+//       card.appendChild(imgBox);
+//       card.appendChild(content);
+//       grid.appendChild(card);
+//     });
 
-  } catch (err) {
-    alert("Error:" + err.message)
-  }
+//   } catch (err) {
+//     alert("Error:" + err.message)
+//   }
   
-}
+// }
 
-product()
+// product()
